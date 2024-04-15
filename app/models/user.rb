@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :service_requests
+  
   include Devise::JWT::RevocationStrategies::JTIMatcher
 
   # Include default devise modules. Others available are:
